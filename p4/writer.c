@@ -14,7 +14,7 @@ int main()
     key = ftok("progfile", 65);
     msgid = msgget(key, 0666 | IPC_CREAT);
     message.mesg_type = 1;
-    printf("Write Data : ");
+    printf("Data : ");
     fgets(message.mesg_text, MAX, stdin);
     msgsnd(msgid, &message, sizeof(message), 0);
     printf("Data sent is : %s \n", message.mesg_text);
