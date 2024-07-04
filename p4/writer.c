@@ -17,6 +17,6 @@ int main()
     printf("Write Data : ");
     fgets(message.mesg_text, MAX, stdin);
     msgsnd(msgid, &message, sizeof(message), 0);
-    printf("Data send is : %s \n", message.mesg_text);
+    printf("Data sent is : %s \n", message.mesg_text);
     return 0;
 }
